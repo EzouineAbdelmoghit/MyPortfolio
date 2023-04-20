@@ -1,0 +1,207 @@
+.skills-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.skill{
+    display: flex;
+    flex-direction: column;
+}
+.skill a{
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration:none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    align-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.popover {
+    display: none;
+    box-shadow: 0px 6px 8px rgba(19, 19, 19, .7);
+    }
+    
+    .popover:target {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    }
+    
+    .popover .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: relative;
+    width: 0;
+    height: 0;
+    color: #fff;
+    background-color: #191919;
+    animation: 1s grow ease forwards;
+    /* text-align: center; */
+    }
+    
+    @keyframes grow {
+        100% {
+        height: max-content;
+        width: 90%;
+        }
+        }
+    
+    
+    
+    
+    
+    .popover .close::after {
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+    font-size: 2em;
+    align-items: center;
+    justify-content: center;
+    background-color: #d881ff;
+    color: #fff;
+    content: "×";
+    cursor: pointer;
+    opacity: 0; 
+    animation: 1s fadeIn ease forwards 0.5s;
+    }
+
+    @keyframes fadeIn {
+        100% {
+        opacity: 1;
+        }
+        }
+
+.Box{
+    display: flex;
+    /* position: absolute; */
+    padding: 50px 0;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Slider .Logo-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    /* transform: translateY(100%); */
+    transition: transform 0.5s ease-in;
+}
+.Slider .Logo-cont.show{
+    transform: translate(0);
+}
+.Slider .logo-slider{
+    width: 80%;
+    display: flex;
+    gap: 20px;
+}
+.Slider .logo-slider .items{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    height: max-content;
+    background-color: transparent;
+    /* box-shadow: 0 4px 5px #cacaca; */
+    /* padding: 0.9375em; */
+    /* border-radius: 8px; */
+    /* border: 2px solid #111; */
+}
+
+.Slider .logo-slider .slick-slide{
+    width: 15.625vw;
+    margin: 0.9375rem;
+}
+.Slider .logo-slider .slick-dots li.slick-active button:before{
+    color: #d881ff;
+    font-size: 0.75rem;
+}
+.Slider .logo-slider .slick-dots li button:before{
+    font-size: 0.75rem;
+}
+.Slider .logo-slider .slick-next:before{
+    color: #d881ff;
+    font-size: 1.5rem;
+}
+.Slider .logo-slider .slick-prev:before{
+    color: #d881ff;
+    font-size: 1.5rem;
+}
+
+.Slider .skill-container .card .percent svg circle{
+    stroke: #191919;
+}
+.Slider{
+    display: none;
+}
+
+@media screen and (max-width:700px) {
+    .Slider{
+        display: block;
+    }
+    .skills-box{
+        display: none;
+    }
+}

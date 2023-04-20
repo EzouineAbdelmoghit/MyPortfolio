@@ -1,0 +1,88 @@
+.contact{
+  padding: 20px 120px;
+  margin-bottom: 60px;
+}
+.contact h4{
+    color: #A6A6A6;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 0px;
+  }
+  .contact h4 span{
+    display: block;
+    color: #ffffff;
+  }
+  .contact p{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    /* color: #111111; */
+  }
+  
+  .contact input:not(:last-child){
+    display: block;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #333333 ;
+    background: inherit;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 10px 0;
+    color: #ffffff;
+    font-size: 1.2em;
+  }
+  .contact .input-box{
+    position: relative;
+  }
+  .contact label{
+    position: absolute;
+    left:0px;
+    top: 10px;
+    color: #A6A6A6;
+    font-size: 16px;
+    transition: all .3s ease-in;
+  }
+  .contact input:focus{
+    border-color: #d881ff;
+  }
+  .contact input:focus ~ label{
+    transform: scale(0.75)translate(-10px,-40px);
+    font-weight: 600;
+    color: #d881ff;
+  }
+  
+  /* .contact .input-box:first-child input:focus ~ label{
+    color: #D15353;
+  }
+  .contact .input-box:nth-child(2) input:focus ~ label{
+    color: #5185D4;
+  }
+  
+  .contact .input-box:nth-child(3) input:focus ~ label{
+    color: #CA56F2;
+  } */
+  .contact input[type="submit"]{
+    background-color: black;
+    border: 2px solid #A6A6A6;
+    color: #ffffff;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .contact input[type="submit"]:hover{
+    background-color: #CA56F2;
+    border-color: #CA56F2;
+  }
+  
+  
+  
+
+
+
+
+  @media screen and (max-width:700px) {
+    .contact{
+      padding: 20px 40px;
+    }
+}

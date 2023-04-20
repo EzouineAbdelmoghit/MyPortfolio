@@ -1,0 +1,147 @@
+#hero{
+    width: 100%;
+}
+
+
+
+#hero .hero-container {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 15px;
+    overflow: hidden;
+  }
+  
+  #hero h1 {
+    margin: 0 0 10px 0;
+    font-size: 64px;
+    font-family: "Satisfy", serif;
+    color: #fff;
+    text-align: center;
+  }
+  
+  #hero h2 {
+    color: #eee;
+    margin-bottom: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  #hero h2:first-child{
+    margin-bottom: 0;
+  }
+  
+  #hero .btn-scroll {
+      margin-top: 20px;
+    transition: 0.4s;
+    color: rgba(255, 255, 255, 0.6);
+    animation: up-down 1s ease-in-out infinite alternate-reverse both;
+  }
+  
+  #hero .btn-scroll i {
+    font-size: 1.5em;
+  }
+  
+  #hero .btn-scroll:hover {
+    color: #d881ff;
+  }
+  @keyframes up-down {
+      0% {
+        transform: translateY(5px);
+      }
+    
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+    
+  
+  
+
+
+
+
+    .content{
+      width: 100%;
+      text-align: center;
+      font-weight: 700;
+      font-family: "Poppins";
+  }
+
+
+
+    #fly-in{
+      font-size: 4em;
+      margin: 40vh auto;
+      height: 20vh;
+      text-transform: uppercase;
+      color: #fff;
+  }
+  #fly-in span{
+      display: block;
+      font-size: 0.4em;
+      opacity: 0.8;
+  }
+  #fly-in div{
+      position: absolute;
+      margin: -2vh 0;
+      opacity: 0;
+      left: 10vw;
+      width: 80vw;
+  }
+  .content.Animation #fly-in div{
+      animation: switch 18s linear forwards infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  .content.Animation #fly-in div:nth-child(2){animation-delay: 4s ;}
+  .content.Animation #fly-in div:nth-child(3){animation-delay: 8s ;}
+  .content.Animation #fly-in div:nth-child(4){animation-delay: 12s;}
+  @keyframes switch{
+      0%{
+          opacity: 1;
+          filter: blur(20);
+          transform:scale(12);
+      }
+      3%{
+          opacity: 1;
+          filter: blur(0);
+          transform:scale(1);
+      }
+      10%{
+          opacity: 1;
+          filter: blur(0);
+          transform:scale(0.9);
+      }
+      13%{
+          opacity: 1;
+          filter: blur(10px);
+          transform:scale(0.1);
+      }
+      40%{
+          opacity:0;
+      }
+      100%{
+          opacity:0;
+      }    
+      
+  }
+  @media screen and (max-width:700px) {
+    .content.Animation #fly-in div:nth-child(3){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* justify-content: center; */
+    }    
+    #fly-in{
+      font-size: 2.5em;
+    }
+}

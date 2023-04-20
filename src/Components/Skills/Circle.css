@@ -1,0 +1,115 @@
+.skill-container{
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 1s;
+}
+
+.skill-container .card{
+    width: 220px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+}
+.skill-container .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.skill-container .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.skill-container .card .percent svg circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: black;
+    stroke-width: 2;
+    transform: translate(5px,5px);
+}
+.skill-container .card .percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440px;
+    stroke-dashoffset: calc( 440px - ( 440px * var(--num) ) / 100 );
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 3s;
+}
+@keyframes fadeIn {
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: dotanime 2s linear forwards;
+    animation-delay: 1s;
+}
+.dot::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
+}
+@keyframes dotanime {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+
+
+
+
+
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.number h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+.number h2 span{
+    /* display: inline-block; */
+    font-size: 0.5em;
+    font-weight: 400;
+}
+.number p{
+    font-size: 0.75em;
+    font-weight: 300;
+    line-height: 2px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.7);
+}

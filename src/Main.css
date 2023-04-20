@@ -1,0 +1,9 @@
+main section{
+    padding: 20px 60px;
+}
+
+@media screen and (max-width:700px) {
+    main section{
+        padding: 20px 40px;
+    }
+}

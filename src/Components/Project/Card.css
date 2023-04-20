@@ -1,0 +1,98 @@
+
+.container {
+    max-width: 400px;
+    margin-left: auto;
+    width: 100%;
+    padding: 100px 0px;
+    position: relative;
+}
+.Card:nth-child(2) .container{
+    margin-right: auto;
+    margin-left: unset;
+}
+.Card:nth-child(2) .container .text{
+    right: -30%;
+    left: unset;
+}
+
+.image-container {
+    padding-bottom: 100%;
+    background: black;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    transition: all .5s ease-in;
+}
+.image-container a {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    color: #fff;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.Card:nth-child(2) .image-container a{
+    left: 20px;
+    right: unset;
+}
+.Card:nth-child(3) .image-container a{
+    bottom:  40px;
+}
+
+
+
+
+.text {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-fill-color: #000;
+    margin: 0;
+    font-size: 64px;
+    width: 90%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+    z-index: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+
+.text.text-dark {
+    -webkit-text-fill-color:#fff;
+}
+.text span {
+    position: relative;
+    display: block;
+}
+@media screen and (max-width:700px) {
+    .text{
+        width: fit-content;
+        font-size: 50px;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+    .Card:nth-child(2) .container .text{
+        right: -35%;
+        left: unset;
+    }
+    .Card:nth-child(3) .container .text{
+        left: 41%;
+    }
+}
+@media screen and (max-width:400px) {
+
+    /* .Card:nth-child(2) .container .text{
+        right: -30%;
+        left: unset;
+    } */
+    .Card:nth-child(3) .container .text{
+        left: 50%;
+    }
+}
