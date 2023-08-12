@@ -11,55 +11,55 @@ export default function Skills() {
         },
         {   id:5,
             name:"Back-end",
-            percentage:"25%"
+            percentage:"75%"
         }
     ]
     let skills2=[
         {   id:6,
             name:"PHP",
-            percentage:"30"
+            percentage:"70"
         },
         {   id:7,
             name:"Laravel",
-            percentage:"20"
+            percentage:"75"
         },
         {   id:8,
             name:"MySql",
-            percentage:"40"
+            percentage:"70"
         }
 
     ]
     let skills=[
         {   id:9,
             name:"HTML",
-            percentage:"85"
+            percentage:"90"
         },
         {   id:10,
             name:"CSS",
-            percentage:"85"
+            percentage:"90"
         },
         {   id:11,
             name:"JS",
-            percentage:"70"
+            percentage:"85"
         },
         {   id:12,
             name:"React",
-            percentage:"45"
+            percentage:"70"
         },
         {   id:13,
             name:"Bootstrap",
-            percentage:"65"
+            percentage:"80"
         },
         {   id:14,
             name:"Tailwind",
-            percentage:"50"
+            percentage:"80"
         }
 
     ]
 
-    let tab2=tab.map((e)=>{
+    let tab2=tab.map((e,index)=>{
         return(
-            <div className='skill'>
+            <div className='skill' key={`prog-${index}`}>
                 <Progressbar key={e.id} text={e.name} percentage={e.percentage}/>
                 {e.name==="Front-end"?<a href="#menu">Details</a>:<a href="#menu1">Details</a>}
                 
@@ -72,7 +72,7 @@ export default function Skills() {
             {tab2}
             <div className="popover" id="menu">
                 <div className='content'>
-                    <a href="#Skills" class="close"> </a>
+                    <a href="#Skills" className="close"> </a>
                         <h2>Front-end skills</h2>
                     <div className='Box'>
                         {
@@ -97,10 +97,10 @@ export default function Skills() {
         <div className="Logo-cont ">
             <div className="logo-slider">
             {
-                skills.map(e=>{return <div className="items"><Circle key={e.id} text={e.name} percentage={e.percentage}/></div> })
+                skills.map((e,index)=>{return <div className="items" key={`unique-i-${index}`}><Circle key={`unique-${e.id}`} text={e.name} percentage={e.percentage}/></div> })
             }
             {
-                skills2.map(e=>{return <div className="items"><Circle key={e.id} text={e.name} percentage={e.percentage}/></div> })
+                skills2.map((e,index)=>{return <div className="items" key={`unique-a-${index}`}><Circle key={`unique-a-${e.id}`} text={e.name} percentage={e.percentage}/></div> })
             }
                 
             </div>

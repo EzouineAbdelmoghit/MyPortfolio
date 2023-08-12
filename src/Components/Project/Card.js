@@ -12,43 +12,43 @@ export default function Card(props) {
   
   return (
   <>
-    <div class="portfolio-list-item" data-aos={props.dataos}>
-      <div class="pli-inner">
-        <div class="pli-image-col">
+    <div className="portfolio-list-item" data-aos={props.dataos}>
+      <div className="pli-inner">
+        <div className="pli-image-col">
           <a
             href={props.url}
-            class="pli-image-link"
+            className="pli-image-link"
             data-cursor="View<br>Project"
           >
-            <div class="pli-image-holder">
-              <figure class="pli-image cover-opacity-2">
+            <div className="pli-image-holder">
+              <figure className="pli-image cover-opacity-2">
                 <img className="anim-image-parallax tt-lazy" data-src="assets/img/portfolio/portfolio-1.jpg" src={props.link} alt=""/>
               </figure>
             </div>
-            <div class="pli-info-col pli-info-inner">
-              <div class="pli-info">
-                <h2 class="pli-title">
+            <div className="pli-info-col pli-info-inner">
+              <div className="pli-info">
+                <h2 className="pli-title">
                   {/* Victorian<br class="hide-from-sm" />
                   Girls */}
                   {props.titre}
                 </h2>
-                <div class="pli-categories-wrap">
-                  <div class="pli-category">Project</div>
+                <div className="pli-categories-wrap">
+                  <div className="pli-category">Project</div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="pli-info-col pli-info-outer">
-          <div class="pli-info">
-            <div class="pli-counter"></div>
-            <h2 class="pli-title">
+        <div className="pli-info-col pli-info-outer">
+          <div className="pli-info">
+            <div className="pli-counter"></div>
+            <h2 className="pli-title">
               <a href={props.url}
                 >{props.titre}</a>
             </h2>
-            <div class="pli-categories-wrap">
-              <div class="pli-category">Project</div>
+            <div className="pli-categories-wrap">
+              <div className="pli-category">Project</div>
             </div>
           </div>
         </div>

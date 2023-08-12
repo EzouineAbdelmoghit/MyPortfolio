@@ -1,18 +1,23 @@
 import Header from './Header';
 import Main from './Main';
 import './App.css';
-const content= document.querySelector(".content");
+// import { useRef } from 'react';
 
-window.addEventListener("scroll", function(){
-  let scrollPosition = window.pageYOffset;
-  console.log(scrollPosition)
-  if(scrollPosition===300){
+document.addEventListener("DOMContentLoaded", function() {
+  const content = document.querySelector(".content");
+
+  // Add scroll event listener now that the DOM is ready
+  window.addEventListener("scroll", function(){
+    let scrollPosition = window.scrollY;
+
+    if (scrollPosition >= 300) {
       content.classList.remove("Animation");
-  }
-  else if(scrollPosition<300){
+    } else {
       content.classList.add("Animation");
-  }
+    }
+  });
 });
+
 
 
 function App() {

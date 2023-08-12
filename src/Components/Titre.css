@@ -34,5 +34,14 @@
     position: relative;
     z-index: 2;
     color: rgba(255, 255, 255, 0.7);
+  }
 
+
+  @media screen and (max-width:782px) {
+    .section-title h2{
+      font-size: 30px;
+    }
+    .section-title span{
+      font-size: 48px;
+    }
   }

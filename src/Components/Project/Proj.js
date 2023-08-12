@@ -37,11 +37,11 @@ export default function Proj() {
         <div id="scroll-container">
           <div id="content-wrap">
             <div id="page-content">
-              <div id="sdc-target" class="tt-section padding-bottom-150">
-                    <div class="tt-section-inner">
+              <div id="sdc-target" className="tt-section padding-bottom-150">
+                    <div className="tt-section-inner">
                     </div>
                     <div
-                      class="portfolio-list pli-cropped pli-info-xlg pl-alter pli-info-overlay pli-title-stroke pli-hover"
+                      className="portfolio-list pli-cropped pli-info-xlg pl-alter pli-info-overlay pli-title-stroke pli-hover"
                     >
                           {
                   tab.map(e=>{

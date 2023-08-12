@@ -99,10 +99,10 @@
 
 .Box{
     display: flex;
-    /* position: absolute; */
-    padding: 50px 0;
+    padding:  0 0 20px 0;
     flex-wrap: wrap;
-    gap: 50px;
+    column-gap: 50px;
+    row-gap: unset;
     justify-content: center;
     align-items: center;
 }
